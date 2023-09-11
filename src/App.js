@@ -9,11 +9,30 @@ import "videojs-youtube";
 import "video.js/dist/video-js.css";
 
 const initialOptions = {
+  playbackRates: [0.1, 0.5, 1, 1.5, 2, 4],
   controls: true,
   fluid: true,
   controlBar: {
+    skipButtons: {
+      forward: 5,
+      backward: 5
+    },
     volumePanel: {
       inline: false
+    }
+  },
+  userActions: {
+    hotkeys: function(event) {
+      // `this` is the player in this context
+
+      // `x` key = pause
+      if (event.which === 88) {
+        this.pause();
+      }
+      // `y` key = play
+      if (event.which === 89) {
+        this.play();
+      }
     }
   }
 };
