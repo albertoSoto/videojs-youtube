@@ -22,7 +22,7 @@ const videoJsOptions = {
   sources: [
     {
       type: "video/youtube",
-      src: "https://www.youtube.com/watch?v=GlhV-OKHecI"
+      src: "https://www.youtube.com/watch?v=F5GO6JwzfkY"
     }
   ]
 };
